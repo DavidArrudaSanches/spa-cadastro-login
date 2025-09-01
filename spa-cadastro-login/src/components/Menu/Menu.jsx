@@ -1,11 +1,12 @@
-import '../Button/Button';
+import Button from '../Button/Button';
 import './Menu.css';
 
-function Menu({unMenuCLick}){
+function Menu( {onMenuClick} ){
     return(
-        <nav className='"app-menu'>
+        
+        <nav className="app-menu">
             
-                <Button onClick={() => onMenuCLick('login')}>login</Button>
+                <Button onClick={() => onMenuClick('login')}>Login</Button>
                 <Button onClick={() => onMenuClick('cadastro')}>Cadastro</Button>
             
         </nav>

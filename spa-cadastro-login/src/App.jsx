@@ -1,16 +1,26 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
 import Header from './components/Header/Header'
+import Menu from './components/Menu/Menu'
+import FormularioLogin from './components/FormularioLogin/FormularioLogin'
+import FormularioCadastro from './components/FormularioCadastro/FormularioCadastro'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [tela,setTela] = useState('login')
 
   return (
-    <Header/>
-    
+    <main>
+      <Header />
+      <Menu onMenuClick={setTela}/>
+ 
+                                                           
+     {tela==='login' ? <FormularioLogin />:<FormularioCadastro/>}
+    </main>
   )
-}
+
+ }
+
+
 
 export default App
